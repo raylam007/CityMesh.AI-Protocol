@@ -1,18 +1,148 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>CityMesh.AI Protocol</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CityMesh.AI Protocol Pack</title>
+  <meta name="description" content="CityMesh.AI Protocol Pack storefront (spec + schemas + examples)." />
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111111;
+      --muted:#555555;
+      --line:#e7e7e7;
+      --card:#fafafa;
+      --btn:#111111;
+      --btnText:#ffffff;
+      --pill:#f1f1f1;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    .wrap{max-width:980px;margin:42px auto;padding:0 18px}
+    header{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,#fff,#fbfbfb);
+      border-radius:14px;
+      padding:22px 18px;
+    }
+    h1{margin:0 0 6px 0;font-size:34px;letter-spacing:-0.5px}
+    .sub{margin:0;color:var(--muted);font-size:14px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
+    .btn{
+      display:inline-block;background:var(--btn);color:var(--btnText);
+      padding:12px 14px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px
+    }
+    .btn.secondary{
+      background:transparent;color:var(--text);
+      border:1px solid var(--line);font-weight:600
+    }
+    .small{font-size:13px}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-block;background:var(--pill);border:1px solid var(--line);
+      border-radius:999px;padding:6px 10px;font-size:12px;color:var(--muted);
+      margin-right:8px;margin-top:8px
+    }
+    .row{display:grid;grid-template-columns:1.2fr 0.8fr;gap:14px;margin-top:14px}
+    @media (max-width: 860px){ .row{grid-template-columns:1fr} }
+    .card{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:16px}
+    h2{margin:0 0 10px 0;font-size:18px;letter-spacing:-0.2px}
+    ul{margin:10px 0 0 0;padding:0}
+    li{margin:6px 0;list-style:none}
+    code{
+      background:#fff;border:1px solid var(--line);
+      padding:2px 6px;border-radius:8px;font-size:12px
+    }
+    footer{
+      margin-top:18px;color:var(--muted);font-size:12px;
+      padding:12px 2px 0 2px;border-top:1px solid var(--line)
+    }
+    a{color:inherit}
+  </style>
 </head>
+
 <body>
-  <h1>CityMesh.AI Protocol</h1>
-  <p>This is the public storefront for the protocol pack.</p>
-  <h2>What’s inside</h2>
-  <ul>
-    <li>Protocol docs</li>
-    <li>Release artifacts (HTML/PDF later)</li>
-    <li>Schema/OpenAPI (later)</li>
-  </ul>
-  <p>Contact: Ray (raylam007)</p>
+  <div class="wrap">
+    <header>
+      <h1>CityMesh.AI Protocol Pack</h1>
+      <p class="sub">Public storefront for CityMesh.AI protocol deliverables.</p>
+
+      <div class="cta">
+        <a class="btn" href="BUY_URL_HERE" target="_blank" rel="noopener">Buy / Get Access</a>
+        <a class="btn secondary" href="https://github.com/raylam007/CityMesh.AI-Protocol" target="_blank" rel="noopener">View Repo</a>
+        <span class="small muted">Contact: <b>Ray (raylam007)</b> · Email: <b>YOUR_EMAIL_HERE</b></span>
+      </div>
+
+      <div>
+        <span class="pill">Spec + Schemas</span>
+        <span class="pill">State Machine</span>
+        <span class="pill">Error Format</span>
+        <span class="pill">Trust Layer</span>
+      </div>
+    </header>
+
+    <div class="row">
+      <section class="card">
+        <h2>What this is</h2>
+        <p class="small muted" style="margin:0;">
+          A sellable protocol pack: documentation + schemas + rules + example payloads.
+          Buyers can implement integrations, validate conformance, and build against a stable spec.
+        </p>
+
+        <ul>
+          <li><b>Protocol Spec</b>: flows, field definitions, state machine, error format</li>
+          <li><b>Schemas</b>: JSON Schema for request/response validation</li>
+          <li><b>Evidence / Examples</b>: example payloads and test vectors</li>
+          <li><b>Trust Layer</b>: flags suspicious listings (abnormally low price / vague descriptions)</li>
+        </ul>
+
+        <p class="small muted" style="margin:12px 0 0 0;">
+          Note: this page is only a storefront. No multi-tenant admin platform is required to start selling the pack.
+        </p>
+      </section>
+
+      <aside class="card">
+        <h2>Deliverables</h2>
+        <ul>
+          <li>Protocol spec skeleton</li>
+          <li>JSON Schemas (v1 models)</li>
+          <li>Negotiation state machine diagram</li>
+          <li>Error format specification</li>
+        </ul>
+
+        <h2 style="margin-top:14px;">Links</h2>
+        <ul>
+          <li><a href="https://github.com/raylam007/CityMesh.AI-Protocol" target="_blank" rel="noopener">Protocol docs (repo)</a></li>
+          <li><a href="https://github.com/raylam007/CityMesh.AI-Protocol/releases" target="_blank" rel="noopener">Releases (optional)</a></li>
+          <li><a href="https://github.com/raylam007/CityMesh.AI-backend" target="_blank" rel="noopener">Reference implementation (backend)</a></li>
+        </ul>
+
+        <p class="small muted" style="margin-top:12px;">
+          Replace <code>BUY_URL_HERE</code> with your Gumroad/LemonSqueezy checkout URL,
+          and <code>YOUR_EMAIL_HERE</code> with your email.
+        </p>
+      </aside>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h2>How to sell (simple)</h2>
+      <ol class="small muted" style="margin:0 0 0 18px;">
+        <li>Create a digital product on Gumroad or LemonSqueezy and upload your protocol pack ZIP.</li>
+        <li>Copy the product checkout URL.</li>
+        <li>Paste it into <code>BUY_URL_HERE</code> above and commit.</li>
+      </ol>
+    </div>
+
+    <footer>
+      © CityMesh.AI — Protocol Pack storefront. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
