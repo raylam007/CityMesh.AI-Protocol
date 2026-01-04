@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CityMesh.AI Protocol Pack</title>
   <meta name="description" content="CityMesh.AI Protocol Pack storefront (spec + schemas + examples)." />
-
   <style>
     :root{
       --bg:#ffffff;
@@ -36,48 +35,86 @@
     .sub{margin:0;color:var(--muted);font-size:14px}
     .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}
     .btn{
-      display:inline-block;background:var(--btn);color:var(--btnText);
-      padding:12px 14px;border-radius:12px;text-decoration:none;font-weight:700;font-size:14px
+      display:inline-block;
+      background:var(--btn);
+      color:var(--btnText);
+      padding:12px 14px;
+      border-radius:12px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      border:0;
+      cursor:pointer;
     }
     .btn.secondary{
-      background:transparent;color:var(--text);
-      border:1px solid var(--line);font-weight:600
+      background:transparent;
+      color:var(--text);
+      border:1px solid var(--line);
+      font-weight:600;
     }
-    .small{font-size:13px}
     .muted{color:var(--muted)}
+    .small{font-size:13px}
     .pill{
-      display:inline-block;background:var(--pill);border:1px solid var(--line);
-      border-radius:999px;padding:6px 10px;font-size:12px;color:var(--muted);
-      margin-right:8px;margin-top:8px
+      display:inline-block;
+      background:var(--pill);
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:12px;
+      color:var(--muted);
+      margin-right:8px;
+      margin-top:8px;
+      user-select:none;
     }
     .row{display:grid;grid-template-columns:1.2fr 0.8fr;gap:14px;margin-top:14px}
-    @media (max-width: 860px){ .row{grid-template-columns:1fr} }
-    .card{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:16px}
+    @media (max-width:860px){ .row{grid-template-columns:1fr} }
+    .card{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:14px;
+      padding:16px;
+    }
     h2{margin:0 0 10px 0;font-size:18px;letter-spacing:-0.2px}
     ul{margin:10px 0 0 0;padding:0}
     li{margin:6px 0;list-style:none}
     code{
-      background:#fff;border:1px solid var(--line);
-      padding:2px 6px;border-radius:8px;font-size:12px
+      background:#fff;
+      border:1px solid var(--line);
+      padding:2px 6px;
+      border-radius:8px;
+      font-size:12px;
     }
     footer{
-      margin-top:18px;color:var(--muted);font-size:12px;
-      padding:12px 2px 0 2px;border-top:1px solid var(--line)
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      padding:12px 2px 0 2px;
+      border-top:1px solid var(--line);
     }
     a{color:inherit}
   </style>
+
+  <script>
+    // EDIT ONLY THIS LINE (optional):
+    const BUY_URL = "PASTE_BUY_URL_HERE"; // e.g. "https://your-gumroad-or-lemonsqueezy-link"
+  </script>
 </head>
 
 <body>
   <div class="wrap">
+
     <header>
       <h1>CityMesh.AI Protocol Pack</h1>
       <p class="sub">Public storefront for CityMesh.AI protocol deliverables.</p>
 
       <div class="cta">
-        <a class="btn" href="BUY_URL_HERE" target="_blank" rel="noopener">Buy / Get Access</a>
+        <a id="buyLink" class="btn" href="#" target="_blank" rel="noopener">Buy / Get Access</a>
         <a class="btn secondary" href="https://github.com/raylam007/CityMesh.AI-Protocol" target="_blank" rel="noopener">View Repo</a>
-        <span class="small muted">Contact: <b>Ray (raylam007)</b> · Email: <b>YOUR_EMAIL_HERE</b></span>
+
+        <span class="small muted">
+          Contact: <b>Ray (raylam007)</b> ·
+          <a href="https://github.com/raylam007" target="_blank" rel="noopener">GitHub Profile</a>
+        </span>
       </div>
 
       <div>
@@ -91,9 +128,9 @@
     <div class="row">
       <section class="card">
         <h2>What this is</h2>
-        <p class="small muted" style="margin:0;">
-          A sellable protocol pack: documentation + schemas + rules + example payloads.
-          Buyers can implement integrations, validate conformance, and build against a stable spec.
+        <p class="muted small" style="margin:0;">
+          A sellable protocol pack: documentation + schemas + rules + example payloads. Buyers can implement integrations,
+          validate conformance, and build against a stable spec.
         </p>
 
         <ul>
@@ -125,24 +162,41 @@
         </ul>
 
         <p class="small muted" style="margin-top:12px;">
-          Replace <code>BUY_URL_HERE</code> with your Gumroad/LemonSqueezy checkout URL,
-          and <code>YOUR_EMAIL_HERE</code> with your email.
+          Replace <code>PASTE_BUY_URL_HERE</code> with your Gumroad/LemonSqueezy checkout URL (optional), then commit.
         </p>
       </aside>
     </div>
 
     <div class="card" style="margin-top:14px;">
       <h2>How to sell (simple)</h2>
-      <ol class="small muted" style="margin:0 0 0 18px;">
+      <ol class="small muted" style="margin:0 0 18px;">
         <li>Create a digital product on Gumroad or LemonSqueezy and upload your protocol pack ZIP.</li>
         <li>Copy the product checkout URL.</li>
-        <li>Paste it into <code>BUY_URL_HERE</code> above and commit.</li>
+        <li>Paste it into <code>BUY_URL</code> at the top of this file and commit.</li>
       </ol>
     </div>
 
     <footer>
       © CityMesh.AI — Protocol Pack storefront. All rights reserved.
     </footer>
+
   </div>
+
+  <script>
+    (function(){
+      var buy = document.getElementById("buyLink");
+      var safeBuy = (typeof BUY_URL === "string" && BUY_URL.trim() && BUY_URL !== "PASTE_BUY_URL_HERE")
+        ? BUY_URL.trim()
+        : "#";
+      buy.href = safeBuy;
+
+      if (safeBuy === "#") {
+        buy.addEventListener("click", function(e){
+          e.preventDefault();
+          alert("Set BUY_URL at the top of docs/index.html");
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
